@@ -2,108 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>APDCL Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthyLife - Dietician</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5fff6;
+      color: #333;
     }
 
-    /* Header */
-    .header {
-      display: flex;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: #003366; /* Deep Blue */
+    header {
+      background-color: #2e8b57;
       color: white;
+      padding: 20px 40px;
+      text-align: center;
     }
 
-    .header img {
-      height: 70px;
-      margin-right: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 2em;
     }
 
-    .header-text {
-      font-size: 14px;
-      line-height: 1.6;
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .header-text span {
-      display: block;
-    }
-
-    .header-text .title {
-      font-size: 16px;
+    nav a {
+      text-decoration: none;
+      color: #2e8b57;
       font-weight: bold;
     }
 
-    /* Navbar */
-    .navbar {
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1546069901-eacef0df6022') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .section h3 {
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+
+    .services {
       display: flex;
       flex-wrap: wrap;
-      padding: 15px 30px;
-      background-color: #ff6600; /* Orange */
-      gap: 15px;
+      justify-content: center;
+      gap: 30px;
     }
 
-    .navbar select {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      font-weight: bold;
-      color: #003366;
-      background-color: white;
-      min-width: 180px;
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* Footer */
-    .footer {
-      background-color: #003366;
-      color: white;
-      padding: 15px 30px;
-      font-size: 13px;
-      position: fixed;
-      bottom: 0;
-      right: 0;
+    .testimonials {
+      font-style: italic;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+
+    input, textarea {
       width: 100%;
-      text-align: right;
-      box-sizing: border-box;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
 
-    .footer a {
-      color: #ffa500;
-      text-decoration: none;
+    button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
-    .footer a:hover {
-      text-decoration: underline;
+    footer {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="header">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Assam_Power_Distribution_Company_Limited_Logo.svg/1200px-Assam_Power_Distribution_Company_Limited_Logo.svg.png" alt="APDCL Logo">
-    <div class="header-text">
-      <span>অসম শক্তি বিতৰণ কোম্পানী লিমিটেড</span>
-      <span>অসম চৰকাৰৰ ৰাজহুৱা খণ্ডৰ এটি পৰিসীমিত কোম্পানী</span>
-      <span class="title">ASSAM POWER DISTRIBUTION COMPANY LIMITED</span>
-      <span>A Govt. of Assam Public Limited Company</span>
-    </div>
+  <header>
+    <h1>HealthyLife Nutrition</h1>
+    <p>Your Personal Diet & Wellness Coach</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Eat Better, Feel Better</h2>
+    <p>Customized diet plans for your unique lifestyle</p>
   </div>
 
-  <!-- Navbar with Dropdowns -->
-  <div class="navbar">
-    <select>
-      <option selected disabled>Outage Analytics</option>
-      <option value="outage1">Power Cut Reports</option>
-      <option value="outage2">Scheduled Maintenance</option>
-    </select>
+  <section class="section" id="about">
+    <h3>About Me</h3>
+    <p>Hi! I'm Dr. Neha Sharma, a certified clinical dietician with over 10 years of experience helping people transform their lives through balanced nutrition. I believe in a holistic approach that nourishes both body and mind.</p>
+  </section>
 
-    <select>
-      <option selected disabled>Fraud Analytics</option>
-      <option value="fraud1">Meter Tampering</option>
-      <option value="f
+  <section class="section" id="services">
+    <h3>My Services</h3>
+    <div class="services">
+      <div class="card">
+        <h4>Weight Management</h4>
+        <p>Personalized plans to help you lose, gain, or maintain weight healthily.</p>
+      </div>
+      <div class="card">
+        <h4>Diabetic Diets</h4>
+        <p>Blood sugar-friendly meals tailored to your needs and preferences.</p>
+      </div>
+      <div class="card">
+        <h4>Sports Nutrition</h4>
+        <p>Fuel your performance with scientifically crafted nutrition guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h3>Testimonials</h3>
+    <div class="testimonials">
+      “I lost 12 kg in 3 months following Dr. Neha’s plan. She changed my life!”<br>– Riya S.
+      <br><br>
+      “My sugar levels are now under control, thanks to the customized diet.”<br>– Anil D.
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact Me</h3>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 HealthyLife Nutrition | All Rights Reserved
+  </footer>
+
+</body>
+</html>
