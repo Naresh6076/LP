@@ -8,74 +8,74 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f4f8;
+      background-color: #f4f4f4;
     }
 
     /* Header */
-    header {
+    .header {
       display: flex;
       align-items: center;
-      background-color: #003366; /* Blue */
-      color: white;
       padding: 15px 30px;
+      background-color: #003366; /* Deep Blue */
+      color: white;
     }
 
-    header img {
+    .header img {
       height: 70px;
       margin-right: 20px;
     }
 
-    header .heading-text {
+    .header-text {
       font-size: 14px;
       line-height: 1.6;
     }
 
-    header .heading-text span {
+    .header-text span {
       display: block;
     }
 
-    /* Navigation Bar */
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #ff6600; /* Orange */
-      padding: 10px 30px;
-    }
-
-    .dropdown {
-      position: relative;
-      margin: 10px;
-    }
-
-    .dropdown select {
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      background-color: white;
-      color: #003366;
+    .header-text .title {
+      font-size: 16px;
       font-weight: bold;
     }
 
-    /* Footer */
-    footer {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      background-color: #003366;
-      color: white;
-      padding: 20px;
-      font-size: 14px;
-      width: 100%;
-      box-sizing: border-box;
-      text-align: right;
+    /* Navbar */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px 30px;
+      background-color: #ff6600; /* Orange */
+      gap: 15px;
     }
 
-    footer a {
+    .navbar select {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #003366;
+      color: white;
+      padding: 15px 30px;
+      font-size: 13px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      text-align: right;
+      box-sizing: border-box;
+    }
+
+    .footer a {
       color: #ffa500;
       text-decoration: none;
     }
 
-    footer a:hover {
+    .footer a:hover {
       text-decoration: underline;
     }
   </style>
@@ -83,42 +83,42 @@
 <body>
 
   <!-- Header -->
-  <header>
+  <div class="header">
     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Assam_Power_Distribution_Company_Limited_Logo.svg/1200px-Assam_Power_Distribution_Company_Limited_Logo.svg.png" alt="APDCL Logo">
-    <div class="heading-text">
-      <span>??? ????? ????? ???????? ???????</span>
-      <span>??? ?????? ??????? ????? ??? ???????? ????????</span>
-      <span><strong>ASSAM POWER DISTRIBUTION COMPANY LIMITED</strong></span>
+    <div class="header-text">
+      <span>অসম শক্তি বিতৰণ কোম্পানী লিমিটেড</span>
+      <span>অসম চৰকাৰৰ ৰাজহুৱা খণ্ডৰ এটি পৰিসীমিত কোম্পানী</span>
+      <span class="title">ASSAM POWER DISTRIBUTION COMPANY LIMITED</span>
       <span>A Govt. of Assam Public Limited Company</span>
     </div>
-  </header>
+  </div>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="dropdown"><select><option>Outage Analytics</option></select></div>
-    <div class="dropdown"><select><option>Fraud Analytics</option></select></div>
-    <div class="dropdown"><select><option>CRM</option></select></div>
-    <div class="dropdown"><select><option>Option 4</option></select></div>
-    <div class="dropdown"><select><option>Option 5</option></select></div>
-    <div class="dropdown"><select><option>Option 6</option></select></div>
-    <div class="dropdown"><select><option>Option 7</option></select></div>
-    <div class="dropdown"><select><option>Option 8</option></select></div>
-    <div class="dropdown"><select><option>Option 9</option></select></div>
-    <div class="dropdown"><select><option>Option 10</option></select></div>
-    <div class="dropdown"><select><option>Option 11</option></select></div>
-    <div class="dropdown"><select><option>Option 12</option></select></div>
-  </nav>
+  <!-- Navbar with Dropdowns -->
+  <div class="navbar">
+    <select><option>Outage Analytics</option></select>
+    <select><option>Fraud Analytics</option></select>
+    <select><option>CRM</option></select>
+    <select><option>Option 4</option></select>
+    <select><option>Option 5</option></select>
+    <select><option>Option 6</option></select>
+    <select><option>Option 7</option></select>
+    <select><option>Option 8</option></select>
+    <select><option>Option 9</option></select>
+    <select><option>Option 10</option></select>
+    <select><option>Option 11</option></select>
+    <select><option>Option 12</option></select>
+  </div>
 
   <!-- Footer -->
-  <footer>
+  <div class="footer">
     <div>
       <strong>Connect with us</strong><br>
-      1912 or 0361�3126201 / 0361-2803200<br>
+      1912 or 0361–3126201 / 0361-2803200<br>
       <a href="mailto:feedback.apdcl@apdcl.org">feedback.apdcl@apdcl.org</a><br>
-      Copyright � 2021 Assam Power Distribution Company Limited (CIN: U40109AS2003SGC007242)<br>
-      Site Developed & Maintained by IT Cell, APDCL
+      Copyright © 2021 Assam Power Distribution Company Limited<br>
+      (CIN: U40109AS2003SGC007242) | Site Developed & Maintained by IT Cell, APDCL
     </div>
-  </footer>
+  </div>
 
 </body>
 </html>
