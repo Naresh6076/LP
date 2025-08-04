@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HealthyLife - Dietician</title>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
@@ -17,11 +19,25 @@
       color: white;
       padding: 20px 40px;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
       margin: 0;
       font-size: 2em;
+    }
+
+    .insta-link {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 1em;
+      text-decoration: none;
+    }
+
+    .insta-link i {
+      margin-right: 6px;
     }
 
     nav {
@@ -116,12 +132,30 @@
       text-align: center;
       padding: 15px;
       margin-top: 40px;
+      position: relative;
+    }
+
+    footer .social {
+      margin-top: 10px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2em;
+      text-decoration: none;
     }
 
     @media (max-width: 768px) {
       .services {
         flex-direction: column;
         align-items: center;
+      }
+
+      .insta-link {
+        position: static;
+        display: block;
+        margin-top: 10px;
       }
     }
   </style>
@@ -131,6 +165,9 @@
   <header>
     <h1>HealthyLife Nutrition</h1>
     <p>Your Personal Diet & Wellness Coach</p>
+    <a class="insta-link" href="https://www.instagram.com/your_perfect_diet/" target="_blank">
+      <i class="fab fa-instagram"></i>@your_perfect_diet
+    </a>
   </header>
 
   <nav>
@@ -195,6 +232,11 @@
 
   <footer>
     &copy; 2025 HealthyLife Nutrition | All Rights Reserved
+    <div class="social">
+      <a href="https://www.instagram.com/your_perfect_diet/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
   </footer>
 
 </body>
